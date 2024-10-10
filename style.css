@@ -226,7 +226,6 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
-    margin-left: 115px;
     margin-bottom: 70px;
     max-width: none;
     min-height: 44px;
@@ -241,7 +240,8 @@ body {
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 170px;
-    }
+}
+
 
     .button-31:hover,
     .button-31:focus {
