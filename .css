@@ -1,0 +1,241 @@
+.roboto-condensed {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Default weight */
+    font-style: normal;
+}
+  
+  /* Example of a different weight */
+  .roboto-condensed-bold {
+    font-weight: 700; /* Bold weight */
+}
+:root {
+    --main-bg: #000000;
+    --red: 255, 0, 0;
+    --yellow: 255, 200, 0;
+    --light: 255, 255, 255;
+    --alpha: .5;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Aligns items in a column */
+    justify-content: space-between; /* Space between items */
+    min-height: 100vh;
+    background-color: var(--main-bg);
+    color: var(--light); /* Default text color */
+}
+
+.user-info {
+    position: absolute; /* Position it at the top left */
+    margin-top: 10px; /* Reduced distance from the top */
+    margin-left: 20px; /* Distance from the left */
+    color: white; /* Text color */
+    font-family: "Roboto Condensed", sans-serif; /* Use Roboto Condensed font */
+}
+
+.username {
+    color: white; /* Text color */
+    margin-left: 10px;
+    margin-top: 5px;
+    font-weight: 700; /* Bold for Username */
+    font-size: 1.5rem; /* Larger font size */
+}
+
+.userid {
+    color: white; /* Text color */
+    margin-left: 10px;
+    margin-top: 2px;
+    padding-top: 3px; /* Space between Username and UserId */
+    font-weight: 550; /* Regular weight for UserId */
+    font-size: 1rem; /* Regular font size */
+}
+
+/* Bubble styles */
+.bubble {
+    position: relative;
+    margin: 0 auto; 
+    margin-top: 50px; /* Reduced margin to decrease space between user info and bubble */
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-image: url('https://i.ibb.co/THtWMY4/192b389b-203b-4dca-8798-f8dae6dc9827.jpg'); /* Image Background */
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 1.5rem rgba(var(--light), 1), 
+        inset 1rem 0 2.5rem rgba(var(--red), 1),
+        inset -1rem 0 3rem rgba(var(--yellow), 1),
+        inset 0 2rem 2.5rem rgba(var(--red), 0.7),
+        inset 0 -1rem 1.5rem rgba(var(--yellow), 0.7),
+        0 0 2rem rgba(var(--light), .2),
+        1rem 0 4rem rgba(var(--red), var(--alpha)),
+        -1rem 0 4rem rgba(var(--yellow), var(--alpha));
+    animation: floating 3s ease-in-out infinite;
+    cursor: pointer;
+    margin-bottom: 40px; /* Space for the navbar */
+}
+
+
+.bubble.animated {
+    animation: rubber 1s linear;
+}
+
+.bubble::before,
+.bubble::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 100%;
+    transform: rotate(40deg);
+}
+
+.bubble::before {
+    top: 2rem;
+    right: 2rem;
+    width: 5rem;
+    height: 2rem;
+    background-color: rgba(var(--light), 1);
+    background: radial-gradient(closest-side, rgba(var(--light), .7) 50%, transparent 100%);
+}
+
+.bubble::after {
+    bottom: 1.5rem;
+    left: 1.5rem;
+    width: 10rem;
+    height: 5rem;
+    background: radial-gradient(closest-side, rgba(var(--light), .3) 50%, transparent 100%);
+}
+
+@keyframes rubber {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes floating {
+    from {
+        transform: translate(0, 0);
+    }
+    65% {
+        transform: translate(0, 1rem);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+.navbar {
+    background-color: var(--main-bg);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Increased height to accommodate icons */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.navbar li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px; /* Adjusted padding for better alignment */
+    transition: background 0.3s;
+    display: flex;
+    width: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.mining-icon {
+    width: 26px; /* Adjust the icon size */
+    height: 26px; /* Adjust the icon size */
+    margin-bottom: 3px; /* Space between the icon and text */
+}
+.wal-icon {
+    width: 27px; /* Adjust the icon size */
+    height: 27px; /* Adjust the icon size */
+    margin-bottom: 3px; /* Space between the icon and text */
+}
+
+.button-31 {
+    background-color: #222;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-left: 100px;
+    margin-bottom: 70px;
+    max-width: none;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 170px;
+    }
+
+    .button-31:hover,
+    .button-31:focus {
+    opacity: .75;
+    }
+@media (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+}
