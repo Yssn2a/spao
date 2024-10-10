@@ -1,3 +1,16 @@
+* {
+    -webkit-user-select: none;   /* Disable text selection on Safari/Chrome */
+    -moz-user-select: none;      /* Disable text selection on Firefox */
+    -ms-user-select: none;       /* Disable text selection on IE/Edge */
+    user-select: none;           /* Disable text selection for all browsers */
+    
+    -webkit-tap-highlight-color: transparent;  /* Remove tap highlight effect on mobile */
+  }
+
+  button, a, input {
+    outline: none;  /* Remove focus outline for interactive elements */
+  }
+
 .roboto-condensed {
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
