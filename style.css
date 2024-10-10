@@ -213,7 +213,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
-    margin: 0 auto; /* Horizontally centers the button */
+    margin-left: 135px; /* Horizontally centers the button */
     margin-bottom: 70px; /* Keeps bottom margin */
     max-width: none;
     min-height: 44px;
