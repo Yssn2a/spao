@@ -4,7 +4,7 @@
     font-weight: 400; /* Default weight */
     font-style: normal;
 }
-  
+
   /* Example of a different weight */
   .roboto-condensed-bold {
     font-weight: 700; /* Bold weight */
@@ -213,8 +213,8 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
-    margin-left: 135px; /* Horizontally centers the button */
-    margin-bottom: 70px; /* Keeps bottom margin */
+    margin-left: 135px;
+    margin-bottom: 70px;
     max-width: none;
     min-height: 44px;
     min-width: 10px;
@@ -228,8 +228,7 @@ body {
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 170px;
-}
-
+    }
 
     .button-31:hover,
     .button-31:focus {
@@ -239,4 +238,3 @@ body {
     html {
         font-size: 10px;
     }
-}
