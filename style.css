@@ -213,8 +213,8 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
-    margin-left: 115px;
-    margin-bottom: 70px;
+    margin: 0 auto; /* Horizontally centers the button */
+    margin-bottom: 70px; /* Keeps bottom margin */
     max-width: none;
     min-height: 44px;
     min-width: 10px;
@@ -228,7 +228,8 @@ body {
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 170px;
-    }
+}
+
 
     .button-31:hover,
     .button-31:focus {
