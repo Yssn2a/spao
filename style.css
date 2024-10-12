@@ -247,7 +247,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
-    margin-left: 135px;
+    margin-left: 115px;
     margin-bottom: 70px;
     max-width: none;
     min-height: 44px;
@@ -276,7 +276,7 @@ body {
 /* Adjust cards to be responsive and fit better under the navbar */
 .card {
     margin-top: 10px;
-    margin-left: 70px;
+    margin-left: 40px;
     width: 100%;
     max-width: 290px;
     height: 70px;
