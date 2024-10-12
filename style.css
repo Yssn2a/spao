@@ -39,7 +39,7 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
-    margin: 0;
+    margin-top: 0px;
     padding: 0;
 }
 
@@ -76,8 +76,23 @@ body {
     font-weight: 550; /* Regular weight for UserId */
     font-size: 1rem; /* Regular font size */
 }
+.Coins {
+    color: white;
+    text-align: center;
+    font-weight: 200;
+    font-size: 3.4rem;
+    z-index: 0;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+.Referral{
+    display: none;
+}
 
-/* Bubble styles */
+.task-list{
+    display: none;
+}
+
 .bubble {
     position: relative;
     margin: 0 auto; 
@@ -132,6 +147,10 @@ body {
     background: radial-gradient(closest-side, rgba(var(--light), .3) 50%, transparent 100%);
 }
 
+.hidden {
+    display: none;
+}
+
 @keyframes rubber {
     from {
         transform: scale3d(1, 1, 1);
@@ -169,13 +188,14 @@ body {
 }
 
 .navbar {
+    z-index: 10;
     background-color: var(--main-bg);
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 60px; /* Increased height to accommodate icons */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 90px rgba(241, 240, 240, 0.2);
 }
 
 .navbar ul {
@@ -214,6 +234,7 @@ body {
     margin-bottom: 3px; /* Space between the icon and text */
 }
 
+
 .button-31 {
     background-color: #222;
     border-radius: 4px;
@@ -226,6 +247,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
+    margin-left: 135px;
     margin-bottom: 70px;
     max-width: none;
     min-height: 44px;
@@ -240,8 +262,7 @@ body {
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 170px;
-}
-
+    }
 
     .button-31:hover,
     .button-31:focus {
@@ -251,3 +272,119 @@ body {
     html {
         font-size: 10px;
     }}
+
+/* Adjust cards to be responsive and fit better under the navbar */
+.card {
+    margin-top: 10px;
+    margin-left: 70px;
+    width: 100%;
+    max-width: 290px;
+    height: 70px;
+    background: #353535;
+    border-radius: 20px;/* Ensures the button is on the right, text on the left */
+    padding: 0 10px; /* Add padding inside the card */
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+}
+
+/* Adjust content and button inside cards */
+.textBox {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    flex-grow: 1;
+    margin-right: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card button {
+    margin-left: 170px;
+    margin-bottom: 200px;
+    color: #090909;
+    padding: 0.4em 1.2em;
+    font-size: 12px;
+    border-radius: 1em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 2px 2px 2px #c5c5c5, -2px -2px 12px #ffffff;
+}
+.h1{
+    align-items: center;
+    margin-top: 12px;
+}
+button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+/* Adjust layout for mobile responsiveness */
+@media (max-width: 768px) {
+    .task-list {
+        justify-content: space-around; /* Adjust layout for smaller screens */
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* From Uiverse.io by alexruix */ 
+.cardref {
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    margin-left: 70px;
+    width: 300px;
+    height: 400px;
+    box-shadow: 2px 2px 2px #c5c5c5, -2px -2px 12px #ffffff;;
+   }
+   
+   .cardref::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+   }
+   
+   .card-info-ref {
+    --color: #181818;
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+    color:#fff;
+    justify-content: center;
+    transition: color 1s;
+   }
+   
+   .cardref .title {
+    font-weight: bold;
+    margin-top: 5px;
+    letter-spacing: .02em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+   }
+   
+   
+   
